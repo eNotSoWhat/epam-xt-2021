@@ -78,12 +78,25 @@ namespace newString
             arr = ans;
         }
 
-        public static void Main()
+        public static implicit operator string (StringArray x)
         {
-            StringArray x = new StringArray();
-            StringArray y = new StringArray();
-            StringArray z = new StringArray();
-            x = x.saRead();
+            string ans = "";
+            for (int i = 0; i < x.len; i++)
+            {
+                ans += x.arr[i];
+            }
+            return ans;
+        }
+
+        public static implicit operator StringArray (string x)
+        {
+            StringArray ans = new StringArray();
+            for (int i = 0; i < x.Length; i++)
+            {
+                ans.arr[i] = x[i];
+            }
+            ans.len = x.Length;
+            return ans;
         }
     }
 }
