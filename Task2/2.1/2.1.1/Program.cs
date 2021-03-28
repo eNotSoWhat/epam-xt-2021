@@ -98,5 +98,9 @@ namespace newString
             ans.len = x.Length;
             return ans;
         }
+        static void Main()
+        {
+            
+        }
     }
 }
