@@ -8,7 +8,8 @@ namespace task1
         {
             //precision 0.01
             string txt = Console.ReadLine().Trim();
-            string tmp; int k = 0;
+            string tmp; 
+            int k = 0;
             string[] words = txt.Split(new char[] { '.', ':', '-', ',', '!', '?', ' '});
             for (int i = 0; i < words.Length; i++)
             {
