@@ -1,0 +1,39 @@
+using System;
+using System.Linq;
+
+namespace SuperString
+{
+    public static class StringCheck
+    {
+        public static string Check (this string str)
+        {
+            char[] chars = str.ToCharArray();
+
+            bool rusString = chars.All(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я'));
+            bool engString = chars.All(ch => (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'));
+            bool numString = chars.All(ch => (ch >= '0' && ch <= '9'));
+
+            if (rusString)
+            {
+                return "Russian";
+            }
+            else if (engString)
+            {
+                return "English";
+            }
+            else if (numString)
+            {
+                return "Numbers";
+            }
+            return "Mixed";
+        }
+        class Program
+        {
+            static void Main()
+            {
+                string s = Console.ReadLine();
+                Console.WriteLine(s.Check());
+            }
+        }
+    }
+}
