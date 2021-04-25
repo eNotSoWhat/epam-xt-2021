@@ -9,9 +9,9 @@ namespace SuperString
         {
             char[] chars = str.ToCharArray();
 
-            bool rusString = chars.All(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я'));
-            bool engString = chars.All(ch => (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'));
-            bool numString = chars.All(ch => (ch >= '0' && ch <= '9'));
+            bool rusString = chars.All(c => (c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я'));
+            bool engString = chars.All(c => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+            bool numString = chars.All(c => (c >= '0' && c <= '9'));
 
             if (rusString)
             {
