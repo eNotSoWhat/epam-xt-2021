@@ -9,19 +9,19 @@ namespace SuperString
         {
             char[] chars = str.ToCharArray();
 
-            bool rusString = chars.All(c => (c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я'));
-            bool engString = chars.All(c => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-            bool numString = chars.All(c => (c >= '0' && c <= '9'));
+            bool rus = chars.All(c => (c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я'));
+            bool eng = chars.All(c => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+            bool num = chars.All(c => (c >= '0' && c <= '9'));
 
-            if (rusString)
+            if (rus)
             {
                 return "Russian";
             }
-            else if (engString)
+            else if (eng)
             {
                 return "English";
             }
-            else if (numString)
+            else if (num)
             {
                 return "Numbers";
             }
@@ -31,8 +31,8 @@ namespace SuperString
         {
             static void Main()
             {
-                string s = Console.ReadLine();
-                Console.WriteLine(s.Check());
+                string str = Console.ReadLine();
+                Console.WriteLine(str.Check());
             }
         }
     }
