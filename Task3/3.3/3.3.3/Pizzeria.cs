@@ -19,8 +19,8 @@ namespace PizzaTime
                 Console.WriteLine(i.Key + ") " + i.Value.name + " - " + i.Value.price);
             }
         }
-        public Action<int, Pizza> Order;
-        public void Queue(int id, Pizza pizza)
+        public Action<int, Pizza[]> Order;
+        public void Queue(int id, Pizza[] pizza)
         {
             Task.Factory.StartNew(() =>
             {
