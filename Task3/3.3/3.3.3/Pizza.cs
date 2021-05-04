@@ -7,7 +7,7 @@ namespace PizzaTime
     {
         public Pizza (string name, int price)
         {
-            this.name = ;
+            this.name = name;
             this.price = price;
         }
         public string Name
